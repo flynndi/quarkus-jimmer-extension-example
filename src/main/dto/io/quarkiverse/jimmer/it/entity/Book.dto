@@ -1,0 +1,21 @@
+BookDetailView {
+    #allScalars
+    store {
+            #allScalars
+        }
+    authors {
+            #allScalars
+        }
+}
+
+input BookInput {
+
+    #allScalars(Book)
+
+    id(store)
+
+    authors {
+        #allScalars(Author)
+        -id
+    }
+}

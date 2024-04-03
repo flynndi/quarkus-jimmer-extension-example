@@ -1,0 +1,77 @@
+quarkus:
+  application:
+    name: quarkus-jimmer-example-kt
+  package:
+    type: uber-jar
+  http:
+    port: 9001
+#  datasource:
+#    db-kind: postgresql
+#    username: postgres
+#    password: 9lxuP0ibQdJWk17
+#    jdbc:
+#      min-size: 2
+#      max-size: 8
+#      url: jdbc:postgresql://111.229.144.242:5432/jimmer_demo
+#    DB2:
+#      db-kind: postgresql
+#      username: postgres
+#      password: 9lxuP0ibQdJWk17
+#      jdbc:
+#        min-size: 2
+#        max-size: 8
+#        url: jdbc:postgresql://111.229.144.242:5432/postgres
+  datasource:
+    db-kind: h2
+    username: default
+    jdbc:
+      min-size: 2
+      max-size: 8
+      url: jdbc:h2:mem:default
+    DB2:
+      db-kind: h2
+      username: db2
+      jdbc:
+        min-size: 2
+        max-size: 8
+        url: jdbc:h2:mem:bd2
+  log:
+    level: DEBUG
+  rest-client:
+    quarkus-jimmer-example-java:
+      url: http://localhost:9000
+  redis:
+    hosts: redis://:aiot@47.103.57.78:30506
+    timeout: 10s
+  jimmer:
+    language: kotlin
+    show-sql: true
+    pretty-sql: true
+    inline-sql-variables: true
+    trigger-type: TRANSACTION_ONLY
+    database-validation:
+      mode: NONE
+    client:
+      ts:
+        path: /Code/ts.zip
+      openapi:
+        path: /openapi.yml
+        ui-path: /openapi.html
+        properties:
+          info:
+            title: Jimmer REST Example(Java)
+            description: This is the OpenAPI UI of Quarkus-Jimmer-Extension REST Example (Java)
+            version: 0.0.1.CR1
+          securities:
+            - tenantHeader: [ 1, 2, 3 ]
+            - oauthHeader: [ 4, 5, 6 ]
+          components:
+            securitySchemes:
+              tenantHeader:
+                type: apiKey
+                name: tenant
+                in: HEADER
+              oauthHeader:
+                type: apiKey
+                name: tenant
+                in: QUERY
