@@ -24,18 +24,17 @@ dependencies {
     implementation ("io.quarkus:quarkus-arc")
     implementation ("io.quarkus:quarkus-resteasy-reactive-jackson")
     implementation ("io.quarkus:quarkus-rest-client-reactive-jackson")
-    implementation ("io.github.flynndi:quarkus-jimmer:999-SNAPSHOT")
-    implementation ("io.github.flynndi:quarkus-jimmer-deployment:999-SNAPSHOT")
     implementation ("io.quarkus:quarkus-bootstrap-gradle-resolver")
-    annotationProcessor ("org.babyfish.jimmer:jimmer-apt:0.8.118")
-    ksp ("org.babyfish.jimmer:jimmer-ksp:0.8.118")
+    implementation ("io.github.flynndi:quarkus-jimmer:${project.property("quarkusJimmerVersion")}")
+    implementation ("io.github.flynndi:quarkus-jimmer-deployment:${project.property("quarkusJimmerVersion")}")
+    ksp ("org.babyfish.jimmer:jimmer-ksp:${project.property("jimmerKspVersion")}")
     testImplementation ("io.quarkus:quarkus-junit5")
     testImplementation ("io.rest-assured:rest-assured")
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 project.afterEvaluate {
@@ -63,6 +62,6 @@ allOpen {
 
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-    kotlinOptions.jvmTarget = JavaVersion.VERSION_17.toString()
+    kotlinOptions.jvmTarget = JavaVersion.VERSION_21.toString()
     kotlinOptions.javaParameters = true
 }
