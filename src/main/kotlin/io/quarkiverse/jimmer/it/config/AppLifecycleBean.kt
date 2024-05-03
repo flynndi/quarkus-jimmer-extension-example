@@ -39,10 +39,6 @@ class AppLifecycleBean {
         LOGGER.info("Default Charset in use = " + this.getDefaultCharset())
         LOGGER.info("The application is starting...")
         LOGGER.info("The application model is " + LaunchMode.current().defaultProfile)
-        var kClass = Locale.getAvailableLocales()::class
-        println(
-            kClass
-        )
         this.initH2DB1()
         this.initH2DB2()
     }

@@ -10,7 +10,7 @@ import io.quarkiverse.jimmer.runtime.Jimmer
 import io.quarkiverse.jimmer.runtime.repository.common.Sort
 import io.quarkiverse.jimmer.runtime.repository.support.Pagination
 import io.quarkus.agroal.DataSource
-import io.smallrye.common.annotation.Blocking
+import io.smallrye.common.annotation.RunOnVirtualThread
 import jakarta.transaction.Transactional
 import jakarta.ws.rs.*
 import jakarta.ws.rs.core.MediaType
@@ -28,6 +28,7 @@ import java.util.*
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Api("test")
+@RunOnVirtualThread
 class TestResources(
 
     private val bookRepository: BookRepository,
