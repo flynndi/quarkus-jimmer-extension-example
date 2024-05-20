@@ -19,7 +19,7 @@ dependencies {
     implementation ("io.quarkus:quarkus-kotlin")
     implementation (kotlin("stdlib"))
     implementation ("org.jetbrains.kotlin:kotlin-stdlib")
-    runtimeOnly ("io.quarkus:quarkus-jdbc-h2")
+    implementation ("io.quarkus:quarkus-jdbc-h2")
 //    implementation ("io.quarkus:quarkus-jdbc-postgresql")
     implementation ("io.quarkus:quarkus-arc")
     implementation ("io.quarkus:quarkus-resteasy-reactive-jackson")

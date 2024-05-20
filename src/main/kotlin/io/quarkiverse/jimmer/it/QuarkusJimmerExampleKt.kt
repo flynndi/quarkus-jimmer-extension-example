@@ -12,6 +12,8 @@ import jakarta.ws.rs.Path
 @Path("QuarkusJimmerExampleKt")
 class QuarkusJimmerExampleKt: QuarkusApplication {
 
+    // java -agentlib:native-image-agent=config-output-dir=/Users/brucewayne/Code/quarkus-jimmer-example-kt/src -jar /Users/brucewayne/Code/quarkus-jimmer-example-kt/build/quarkus-jimmer-example-kt-unspecified-runner.jar
+
     companion object {
         @JvmStatic
         fun main(array: Array<String>) {

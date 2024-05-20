@@ -490,8 +490,7 @@ class TestResourceTestCase {
                 {
                      "id": "E85FC166-66DD-F496-F733-22BA38DC807D",
                      "userId": "12",
-                     "roleId": "213",
-                     "deleteFlag": false
+                     "roleId": "213"
                  }
                 
                 """.trimIndent()
@@ -511,7 +510,7 @@ class TestResourceTestCase {
             "e85fc166-66dd-f496-f733-22ba38dc807d",
             response.jsonPath().getString("modifiedEntity.id")
         )
-        Assertions.assertFalse(response.jsonPath().getBoolean("modified"))
+        Assertions.assertTrue(response.jsonPath().getBoolean("modified"))
     }
 
     @Test

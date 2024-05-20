@@ -30,6 +30,9 @@
   "name":"[Ljava.lang.String;"
 },
 {
+  "name":"[Ljava.math.BigDecimal;"
+},
+{
   "name":"com.arjuna.ats.arjuna.common.CoordinatorEnvironmentBean",
   "allDeclaredFields":true,
   "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"getCheckedActionFactory","parameterTypes":[] }, {"name":"getCheckedActionFactoryClassName","parameterTypes":[] }, {"name":"getCommunicationStore","parameterTypes":[] }, {"name":"getDefaultTimeout","parameterTypes":[] }, {"name":"getDynamic1PC","parameterTypes":[] }, {"name":"getMaxTwoPhaseCommitThreads","parameterTypes":[] }, {"name":"getTxReaperCancelFailWaitPeriod","parameterTypes":[] }, {"name":"getTxReaperCancelWaitPeriod","parameterTypes":[] }, {"name":"getTxReaperMode","parameterTypes":[] }, {"name":"getTxReaperTimeout","parameterTypes":[] }, {"name":"getTxReaperTraceGracePeriod","parameterTypes":[] }, {"name":"getTxReaperTraceInterval","parameterTypes":[] }, {"name":"getTxReaperZombieMax","parameterTypes":[] }, {"name":"isAllowCheckedActionFactoryOverride","parameterTypes":[] }, {"name":"isAlternativeRecordOrdering","parameterTypes":[] }, {"name":"isAsyncAfterSynchronization","parameterTypes":[] }, {"name":"isAsyncBeforeSynchronization","parameterTypes":[] }, {"name":"isAsyncCommit","parameterTypes":[] }, {"name":"isAsyncPrepare","parameterTypes":[] }, {"name":"isAsyncRollback","parameterTypes":[] }, {"name":"isBeforeCompletionWhenRollbackOnly","parameterTypes":[] }, {"name":"isClassicPrepare","parameterTypes":[] }, {"name":"isCommitOnePhase","parameterTypes":[] }, {"name":"isDynamic1PC","parameterTypes":[] }, {"name":"isEnableStatistics","parameterTypes":[] }, {"name":"isFinalizeBasicActions","parameterTypes":[] }, {"name":"isMaintainHeuristics","parameterTypes":[] }, {"name":"isReadonlyOptimisation","parameterTypes":[] }, {"name":"isSharedTransactionLog","parameterTypes":[] }, {"name":"isStartDisabled","parameterTypes":[] }, {"name":"isTransactionStatusManagerEnable","parameterTypes":[] }, {"name":"isWriteOptimisation","parameterTypes":[] }, {"name":"setAllowCheckedActionFactoryOverride","parameterTypes":["boolean"] }, {"name":"setAlternativeRecordOrdering","parameterTypes":["boolean"] }, {"name":"setAsyncAfterSynchronization","parameterTypes":["boolean"] }, {"name":"setAsyncBeforeSynchronization","parameterTypes":["boolean"] }, {"name":"setAsyncCommit","parameterTypes":["boolean"] }, {"name":"setAsyncPrepare","parameterTypes":["boolean"] }, {"name":"setAsyncRollback","parameterTypes":["boolean"] }, {"name":"setBeforeCompletionWhenRollbackOnly","parameterTypes":["boolean"] }, {"name":"setCheckedActionFactory","parameterTypes":["com.arjuna.ats.arjuna.coordinator.CheckedActionFactory"] }, {"name":"setCheckedActionFactoryClassName","parameterTypes":["java.lang.String"] }, {"name":"setClassicPrepare","parameterTypes":["boolean"] }, {"name":"setCommitOnePhase","parameterTypes":["boolean"] }, {"name":"setCommunicationStore","parameterTypes":["java.lang.String"] }, {"name":"setDefaultTimeout","parameterTypes":["int"] }, {"name":"setDynamic1PC","parameterTypes":["boolean"] }, {"name":"setEnableStatistics","parameterTypes":["boolean"] }, {"name":"setFinalizeBasicActions","parameterTypes":["boolean"] }, {"name":"setMaintainHeuristics","parameterTypes":["boolean"] }, {"name":"setMaxTwoPhaseCommitThreads","parameterTypes":["int"] }, {"name":"setReadonlyOptimisation","parameterTypes":["boolean"] }, {"name":"setSharedTransactionLog","parameterTypes":["boolean"] }, {"name":"setStartDisabled","parameterTypes":["boolean"] }, {"name":"setTransactionLog","parameterTypes":["boolean"] }, {"name":"setTransactionStatusManagerEnable","parameterTypes":["boolean"] }, {"name":"setTxReaperCancelFailWaitPeriod","parameterTypes":["long"] }, {"name":"setTxReaperCancelWaitPeriod","parameterTypes":["long"] }, {"name":"setTxReaperMode","parameterTypes":["java.lang.String"] }, {"name":"setTxReaperTimeout","parameterTypes":["long"] }, {"name":"setTxReaperTraceGracePeriod","parameterTypes":["long"] }, {"name":"setTxReaperTraceInterval","parameterTypes":["long"] }, {"name":"setTxReaperZombieMax","parameterTypes":["int"] }, {"name":"setWriteOptimisation","parameterTypes":["boolean"] }]
@@ -282,6 +285,25 @@
   "name":"io.quarkiverse.jimmer.it.config.UUIdScalarProvider"
 },
 {
+  "name":"io.quarkiverse.jimmer.it.config.jsonmapping.AuthUser",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true
+},
+{
+  "name":"io.quarkiverse.jimmer.it.config.jsonmapping.AuthUserDeserializer",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"io.quarkiverse.jimmer.it.config.jsonmapping.AuthUserMixin",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true
+},
+{
+  "name":"io.quarkiverse.jimmer.it.config.jsonmapping.SerializationCustomizer"
+},
+{
   "name":"io.quarkiverse.jimmer.it.entity.Author",
   "methods":[{"name":"books","parameterTypes":[] }, {"name":"firstName","parameterTypes":[] }, {"name":"gender","parameterTypes":[] }, {"name":"getBooks","parameterTypes":[] }, {"name":"getFirstName","parameterTypes":[] }, {"name":"getGender","parameterTypes":[] }, {"name":"getId","parameterTypes":[] }, {"name":"getLastName","parameterTypes":[] }, {"name":"id","parameterTypes":[] }, {"name":"isBooks","parameterTypes":[] }, {"name":"isFirstName","parameterTypes":[] }, {"name":"isGender","parameterTypes":[] }, {"name":"isId","parameterTypes":[] }, {"name":"isLastName","parameterTypes":[] }, {"name":"lastName","parameterTypes":[] }]
 },
@@ -302,10 +324,12 @@
 },
 {
   "name":"io.quarkiverse.jimmer.it.entity.BaseEntity",
+  "queryAllDeclaredMethods":true,
   "methods":[{"name":"createdTime","parameterTypes":[] }, {"name":"getCreatedTime","parameterTypes":[] }, {"name":"getModifiedTime","parameterTypes":[] }, {"name":"isCreatedTime","parameterTypes":[] }, {"name":"isModifiedTime","parameterTypes":[] }, {"name":"modifiedTime","parameterTypes":[] }]
 },
 {
   "name":"io.quarkiverse.jimmer.it.entity.Book",
+  "queryAllDeclaredMethods":true,
   "methods":[{"name":"authors","parameterTypes":[] }, {"name":"edition","parameterTypes":[] }, {"name":"getAuthors","parameterTypes":[] }, {"name":"getEdition","parameterTypes":[] }, {"name":"getId","parameterTypes":[] }, {"name":"getName","parameterTypes":[] }, {"name":"getPrice","parameterTypes":[] }, {"name":"getStore","parameterTypes":[] }, {"name":"id","parameterTypes":[] }, {"name":"isAuthors","parameterTypes":[] }, {"name":"isEdition","parameterTypes":[] }, {"name":"isId","parameterTypes":[] }, {"name":"isName","parameterTypes":[] }, {"name":"isPrice","parameterTypes":[] }, {"name":"isStore","parameterTypes":[] }, {"name":"name","parameterTypes":[] }, {"name":"price","parameterTypes":[] }, {"name":"store","parameterTypes":[] }]
 },
 {
@@ -324,7 +348,19 @@
   "methods":[{"name":"getType","parameterTypes":[] }]
 },
 {
+  "name":"io.quarkiverse.jimmer.it.entity.BookDraft$$$Impl",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"getCreatedTime","parameterTypes":[] }, {"name":"getEdition","parameterTypes":[] }, {"name":"getId","parameterTypes":[] }, {"name":"getModifiedTime","parameterTypes":[] }, {"name":"getName","parameterTypes":[] }, {"name":"getPrice","parameterTypes":[] }, {"name":"getStore","parameterTypes":[] }, {"name":"getTenant","parameterTypes":[] }]
+},
+{
+  "name":"io.quarkiverse.jimmer.it.entity.BookDraft$$$Implementor",
+  "queryAllDeclaredMethods":true
+},
+{
   "name":"io.quarkiverse.jimmer.it.entity.BookStore",
+  "queryAllDeclaredMethods":true,
   "methods":[{"name":"books","parameterTypes":[] }, {"name":"getBooks","parameterTypes":[] }, {"name":"getId","parameterTypes":[] }, {"name":"getName","parameterTypes":[] }, {"name":"getWebsite","parameterTypes":[] }, {"name":"id","parameterTypes":[] }, {"name":"isBooks","parameterTypes":[] }, {"name":"isId","parameterTypes":[] }, {"name":"isName","parameterTypes":[] }, {"name":"isWebsite","parameterTypes":[] }, {"name":"name","parameterTypes":[] }, {"name":"website","parameterTypes":[] }]
 },
 {
@@ -343,10 +379,23 @@
   "methods":[{"name":"getType","parameterTypes":[] }]
 },
 {
-  "name":"io.quarkiverse.jimmer.it.entity.Gender"
+  "name":"io.quarkiverse.jimmer.it.entity.BookStoreDraft$$$Impl",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"getId","parameterTypes":[] }]
+},
+{
+  "name":"io.quarkiverse.jimmer.it.entity.BookStoreDraft$$$Implementor",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"io.quarkiverse.jimmer.it.entity.Gender",
+  "fields":[{"name":"FEMALE"}, {"name":"MALE"}]
 },
 {
   "name":"io.quarkiverse.jimmer.it.entity.TenantAware",
+  "queryAllDeclaredMethods":true,
   "methods":[{"name":"getTenant","parameterTypes":[] }, {"name":"isTenant","parameterTypes":[] }, {"name":"tenant","parameterTypes":[] }]
 },
 {
@@ -360,7 +409,8 @@
 },
 {
   "name":"io.quarkiverse.jimmer.it.entity.UserRole",
-  "methods":[{"name":"deleteFlag","parameterTypes":[] }, {"name":"getDeleteFlag","parameterTypes":[] }, {"name":"getId","parameterTypes":[] }, {"name":"getRoleId","parameterTypes":[] }, {"name":"getUserId","parameterTypes":[] }, {"name":"id","parameterTypes":[] }, {"name":"isDeleteFlag","parameterTypes":[] }, {"name":"isId","parameterTypes":[] }, {"name":"isRoleId","parameterTypes":[] }, {"name":"isUserId","parameterTypes":[] }, {"name":"roleId","parameterTypes":[] }, {"name":"userId","parameterTypes":[] }]
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"authUser","parameterTypes":[] }, {"name":"deleteFlag","parameterTypes":[] }, {"name":"getAuthUser","parameterTypes":[] }, {"name":"getDeleteFlag","parameterTypes":[] }, {"name":"getId","parameterTypes":[] }, {"name":"getRoleId","parameterTypes":[] }, {"name":"getUserId","parameterTypes":[] }, {"name":"id","parameterTypes":[] }, {"name":"isAuthUser","parameterTypes":[] }, {"name":"isDeleteFlag","parameterTypes":[] }, {"name":"isId","parameterTypes":[] }, {"name":"isRoleId","parameterTypes":[] }, {"name":"isUserId","parameterTypes":[] }, {"name":"roleId","parameterTypes":[] }, {"name":"userId","parameterTypes":[] }]
 },
 {
   "name":"io.quarkiverse.jimmer.it.entity.UserRole$DefaultImpls",
@@ -376,6 +426,17 @@
   "name":"io.quarkiverse.jimmer.it.entity.UserRoleDraft$$",
   "fields":[{"name":"INSTANCE"}],
   "methods":[{"name":"getType","parameterTypes":[] }]
+},
+{
+  "name":"io.quarkiverse.jimmer.it.entity.UserRoleDraft$$$Impl",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"getAuthUser","parameterTypes":[] }, {"name":"getDeleteFlag","parameterTypes":[] }, {"name":"getId","parameterTypes":[] }, {"name":"getRoleId","parameterTypes":[] }, {"name":"getUserId","parameterTypes":[] }]
+},
+{
+  "name":"io.quarkiverse.jimmer.it.entity.UserRoleDraft$$$Implementor",
+  "queryAllDeclaredMethods":true
 },
 {
   "name":"io.quarkiverse.jimmer.it.entity.dto.UserRoleInput"
@@ -446,7 +507,8 @@
 {
   "name":"io.quarkiverse.jimmer.it.resource.TestResources",
   "queryAllPublicMethods":true,
-  "fields":[{"name":"COMPLEX_BOOK"}]
+  "fields":[{"name":"COMPLEX_BOOK"}],
+  "methods":[{"name":"testUserRoleRepositoryDeleteAll","parameterTypes":["java.util.List"] }, {"name":"testUserRoleRepositoryInsertInput","parameterTypes":["io.quarkiverse.jimmer.it.entity.dto.UserRoleInput"] }, {"name":"testUserRoleRepositorySave","parameterTypes":["io.quarkiverse.jimmer.it.entity.UserRole"] }, {"name":"testUserRoleRepositorySaveEntities","parameterTypes":["java.util.List"] }, {"name":"testUserRoleRepositorySaveEntitiesSaveMode","parameterTypes":["java.util.List"] }, {"name":"testUserRoleRepositorySaveInput","parameterTypes":["io.quarkiverse.jimmer.it.entity.dto.UserRoleInput"] }, {"name":"testUserRoleRepositorySaveInputSaveMode","parameterTypes":["io.quarkiverse.jimmer.it.entity.dto.UserRoleInput"] }, {"name":"testUserRoleRepositoryUpdate","parameterTypes":["io.quarkiverse.jimmer.it.entity.UserRole"] }, {"name":"testUserRoleRepositoryUpdateInput","parameterTypes":["io.quarkiverse.jimmer.it.entity.dto.UserRoleInput"] }]
 },
 {
   "name":"io.quarkiverse.jimmer.it.resource.TestResources$quarkusrestinvoker$UserRoleRepositoryById_970d2838cc20d8b4a473b7c75edbd237fbec05f1",
@@ -617,7 +679,12 @@
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
-  "name":"io.quarkiverse.jimmer.it.resource.UserRoleResource"
+  "name":"io.quarkiverse.jimmer.it.resource.UserRoleResource",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"io.quarkiverse.jimmer.it.resource.UserRoleResource$quarkusrestinvoker$userRoleFindById_d5fd9125321d62a8f3847ee04fa3cebde06940af",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
   "name":"io.quarkiverse.jimmer.it.service.BookStoreService"
@@ -801,7 +868,7 @@
 },
 {
   "name":"io.quarkus.arc.generator.Default_jakarta_enterprise_context_ApplicationScoped_ContextInstances",
-  "fields":[{"name":"0l"}, {"name":"10l"}, {"name":"11l"}, {"name":"12l"}, {"name":"13l"}, {"name":"14l"}, {"name":"15l"}, {"name":"16l"}, {"name":"17l"}, {"name":"18l"}, {"name":"19l"}, {"name":"1l"}, {"name":"20l"}, {"name":"21l"}, {"name":"22l"}, {"name":"2l"}, {"name":"3l"}, {"name":"4l"}, {"name":"5l"}, {"name":"6l"}, {"name":"7l"}, {"name":"8l"}, {"name":"9l"}]
+  "fields":[{"name":"0l"}, {"name":"10l"}, {"name":"11l"}, {"name":"12l"}, {"name":"13l"}, {"name":"14l"}, {"name":"15l"}, {"name":"16l"}, {"name":"17l"}, {"name":"18l"}, {"name":"19l"}, {"name":"1l"}, {"name":"20l"}, {"name":"21l"}, {"name":"22l"}, {"name":"23l"}, {"name":"2l"}, {"name":"3l"}, {"name":"4l"}, {"name":"5l"}, {"name":"6l"}, {"name":"7l"}, {"name":"8l"}, {"name":"9l"}]
 },
 {
   "name":"io.quarkus.arc.generator.Default_jakarta_enterprise_context_RequestScoped_ContextInstances",
@@ -1657,6 +1724,10 @@
   "name":"java.io.Reader"
 },
 {
+  "name":"java.io.Serializable",
+  "queryAllDeclaredMethods":true
+},
+{
   "name":"java.lang.Boolean"
 },
 {
@@ -1670,13 +1741,24 @@
   "name":"java.lang.ClassValue"
 },
 {
+  "name":"java.lang.Cloneable",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"java.lang.Comparable",
+  "queryAllDeclaredMethods":true
+},
+{
   "name":"java.lang.Long"
 },
 {
-  "name":"java.lang.Number"
+  "name":"java.lang.Number",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true
 },
 {
   "name":"java.lang.Object",
+  "allDeclaredFields":true,
   "queryAllPublicMethods":true
 },
 {
@@ -1703,7 +1785,7 @@
 },
 {
   "name":"java.lang.Thread$Builder$OfVirtual",
-  "methods":[{"name":"name","parameterTypes":["java.lang.String","long"] }]
+  "methods":[{"name":"name","parameterTypes":["java.lang.String","long"] }, {"name":"uncaughtExceptionHandler","parameterTypes":["java.lang.Thread$UncaughtExceptionHandler"] }]
 },
 {
   "name":"java.lang.annotation.Documented",
@@ -1720,7 +1802,10 @@
   "methods":[{"name":"value","parameterTypes":[] }]
 },
 {
-  "name":"java.math.BigDecimal"
+  "name":"java.math.BigDecimal",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true
 },
 {
   "name":"java.net.InetSocketAddress"
@@ -1793,7 +1878,14 @@
   "name":"java.util.OptionalLong"
 },
 {
-  "name":"java.util.UUID"
+  "name":"java.util.UUID",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true
+},
+{
+  "name":"java.util.concurrent.Executors",
+  "methods":[{"name":"newThreadPerTaskExecutor","parameterTypes":["java.util.concurrent.ThreadFactory"] }]
 },
 {
   "name":"java.util.concurrent.ForkJoinTask",
@@ -1810,10 +1902,6 @@
 {
   "name":"java.util.concurrent.atomic.Striped64",
   "fields":[{"name":"base"}, {"name":"cellsBusy"}]
-},
-{
-  "name":"java.util.concurrent.atomic.Striped64$Cell",
-  "fields":[{"name":"value"}]
 },
 {
   "name":"java.util.logging.Level"
@@ -1955,6 +2043,10 @@
   "name":"org.babyfish.jimmer.error.CodeBasedRuntimeException"
 },
 {
+  "name":"org.babyfish.jimmer.runtime.ImmutableSpi",
+  "queryAllDeclaredMethods":true
+},
+{
   "name":"org.babyfish.jimmer.sql.GeneratedValue",
   "queryAllDeclaredMethods":true,
   "methods":[{"name":"generatorRef","parameterTypes":[] }, {"name":"generatorType","parameterTypes":[] }, {"name":"sequenceName","parameterTypes":[] }, {"name":"strategy","parameterTypes":[] }]
@@ -1992,6 +2084,11 @@
   "queryAllDeclaredMethods":true
 },
 {
+  "name":"org.babyfish.jimmer.sql.LogicalDeleted",
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"generatorRef","parameterTypes":[] }, {"name":"generatorType","parameterTypes":[] }, {"name":"value","parameterTypes":[] }]
+},
+{
   "name":"org.babyfish.jimmer.sql.ManyToMany",
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
@@ -2022,6 +2119,9 @@
 },
 {
   "name":"org.babyfish.jimmer.sql.kt.KSqlClient"
+},
+{
+  "name":"org.babyfish.jimmer.sql.kt.cfg.KCustomizer"
 },
 {
   "name":"org.babyfish.jimmer.sql.kt.filter.KFilter"
@@ -2324,6 +2424,9 @@
 },
 {
   "name":"org.jboss.tm.usertx.UserTransactionRegistry"
+},
+{
+  "name":"org.locationtech.jts.geom.Geometry"
 },
 {
   "name":"org.quartz.Job"

@@ -2,9 +2,12 @@ quarkus:
   application:
     name: quarkus-jimmer-example-kt
   package:
-    type: uber-jar
+    jar:
+      enabled: false
+      type: uber-jar
   native:
-    additional-build-args: \-H:+UnlockExperimentalVMOptions,\-H:ReflectionConfigurationFiles=reflect-config.json,\-H:ResourceConfigurationFiles=resource-config.json,\-H:DynamicProxyConfigurationResources=proxy-config.json,\-H:JNIConfigurationResources=jni-config.json,\-H:SerializationConfigurationResources=serialization-config.json,\-H:-UnlockExperimentalVMOptions
+    enabled: true
+    additional-build-args: \-H:+UnlockExperimentalVMOptions,\-H:ReflectionConfigurationFiles=reflect-config.json,\-H:ResourceConfigurationFiles=resource-config.json,\-H:DynamicProxyConfigurationResources=proxy-config.json,\-H:JNIConfigurationResources=jni-config.json,\-H:SerializationConfigurationResources=serialization-config.json, \-H:-UnlockExperimentalVMOptions
   http:
     port: 9001
   datasource:
@@ -23,11 +26,8 @@ quarkus:
         url: jdbc:h2:mem:bd2
   log:
     level: DEBUG
-  rest-client:
-    quarkus-jimmer-example-java:
-      url: http://localhost:9000
   redis:
-    hosts: redis://:aiot@47.103.57.78:30506
+    hosts: redis://localhost:30506
     timeout: 10s
   jimmer:
     language: kotlin
